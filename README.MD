@@ -8,8 +8,8 @@
 
 | Programa | Arquivo |
 | ------ | ------ |
-| Exercicio 1 | [https://github.com/helthbrazil/exercicio-aluno-engenharia-2/blob/master/codigo_ex_1.java][Ex1] |
-| Exercicio 2 | [https://github.com/helthbrazil/exercicio-aluno-engenharia-2/blob/master/codigo_ex_2.java][Ex2] |
+| Exercicio 1 | [Código fonte ex.1][Ex1] |
+| Exercicio 2 | [Código fonte ex.2][Ex2] |
 
 
    [Ex1]: <https://github.com/helthbrazil/exercicio-aluno-engenharia-2/blob/master/codigo_ex_1.java>
