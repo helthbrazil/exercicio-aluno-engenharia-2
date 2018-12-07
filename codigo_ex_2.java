@@ -53,8 +53,7 @@ public class Main {
 				System.out.println("Informe o valor valor inteiro para a posição [" + i + "][" + j + "]");
 				// LER O VALOR PARA A POSIÇÃO [I][J] DA MATRIZ
 				matriz[i][j] = leitor.nextInt();
-
-
+				
 				// SE O ELEMENTO ESTIVER NA PRIMEIRA COLUNA OU ÚLTIMA COLUNA (M - 1)
 				// SE QUISER ALTERAR PARA A PENULTIMA COLUNA BASTA TROCAR A VARIÁVEL PARA
 				// PENULTIMA_COLUNA
