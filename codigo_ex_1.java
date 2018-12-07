@@ -37,7 +37,11 @@ public class Main1 {
 		// ITERAR O VETOR POR POSIÇÃO ATUALIZANDO O VALOR DOS ELEMENTOS
 		for (int i = 0; i < n; i++) {
 			System.out.println("Informe o valor do elemento na posição[" + i + "]");
+			
+			// LER O VALOR DO ELEMENTO
 			int elemento = leitor.nextInt();
+			
+			// ATUALIZAR A POSIÇÃO DO VETOR COM O VALOR DO ELEMENTO
 			vetor[i] = elemento;
 
 			// TESTA SE O ELEMENTO É UM NÚMERO PAR
