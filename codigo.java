@@ -48,28 +48,37 @@ public class Main {
 				// LER O VALOR PARA A POSIÇÃO [I][J] DA MATRIZ
 				matriz[i][j] = leitor.nextInt();
 
+				// INSTANCIAR CONSTANTES PARA FACILITAR A IDENTIFICAÇÃO DOS POSICIONAMENTOS
+				final int PRIMEIRA_LINHA = 0;
+				final int SEGUNDA_LINHA = 1;
+				final int PENULTIMA_COLUNA = (m - 2);
+				final int ULTIMA_COLUNA = (m - 1);
+
 				// SE O ELEMENTO ESTIVER NA PRIMEIRA COLUNA OU ÚLTIMA COLUNA (M - 1)
-				// SOMAR A VÁRIAVEL DE SOMA COM O VALOR DO ELEMENTO
-				if (i == 0 || j == (m - 1)) {
+				// SE QUISER ALTERAR PARA A PENULTIMA COLUNA BASTA TROCAR A VARIÁVEL PARA PENULTIMA_COLUNA
+				if (i == SEGUNDA_LINHA || j == ULTIMA_COLUNA) {
+					// SOMAR A VÁRIAVEL DE SOMA COM O VALOR DO ELEMENTO
 					somaLinhaColuna += matriz[i][j];
 				}
 
 				// SE O ELEMENTO ESTIVER NA PENÚLTIMA COLUNA FOR ÍMPÁR (RESTO DA DIVISÃO POR 2 É
 				// DIFERENTE DE 0) DEVE-SE INCREMENTAR O VALOR DA QUANTIDADE DE ÍMPARES EM 1
-				
-				if (j == (m - 2)) {
+
+				if (j == PENULTIMA_COLUNA) {
 					if (matriz[i][j] % 2 != 0) {
+						// INCREMENTAR O VALOR DA VARIÁVEL EM 1 UNIDADE
 						quantidadeImparesPenultimaColuna += 1;
 					}
 				}
 			}
 		}
 
+		// SALTAR LINHA NA IMPRESSÃO
 		System.out.println();
 
 		// IMPRIMIR A MATRIZ
 		System.out.println("MATRIZ\r\n");
-		
+
 		for (int x = 0; x < n; x++) {
 			for (int y = 0; y < m; y++) {
 				System.out.print(matriz[x][y] + "  ");
@@ -82,12 +91,13 @@ public class Main {
 
 		// CALCULAR O VALOR DA PORCENTAGEM
 		double porcentagem = (quantidadeImparesPenultimaColuna / (double) n) * 100;
-		
+
 		DecimalFormat formatadorDecimal = new DecimalFormat("#.##");
 
 		// IMPRIMIR RESULTADOS
-		System.out.println("A porcentagem dos números ímpares na penúltima coluna é:" + formatadorDecimal.format(porcentagem)+"%");
-		System.out.println("A soma dos elementos da primeira linha e da ultima coluna é:" + somaLinhaColuna);
+		System.out.println("A porcentagem dos números ímpares na penúltima coluna é:"
+				+ formatadorDecimal.format(porcentagem) + "%");
+		System.out.println("A soma dos elementos da segunda linha e da ultima coluna é:" + somaLinhaColuna);
 
 	}
 }
